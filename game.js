@@ -20,7 +20,7 @@
 
   // ===== 广告模块 =====
   // AdSense publisher ID（审核通过后替换）
-  const ADSENSE_ID = 'ca-pub-YOUR_PUB_ID';
+  const ADSENSE_ID = 'ca-pub-6156180492735752';
 
   const 广告 = {
     已初始化: false,
