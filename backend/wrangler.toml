@@ -1,0 +1,9 @@
+name = "tile-stack-api"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# KV namespace for scores — create with: wrangler kv:namespace create "SCORES"
+# Then replace the id below with the actual namespace id
+[[kv_namespaces]]
+binding = "SCORES"
+id = "4fd232ad695d4ae4931fff389d726e40"
