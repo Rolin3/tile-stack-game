@@ -1,0 +1,245 @@
+/* ===== 基础重置 ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 100%; height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #1a1a2e;
+  color: #eee;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* ===== 页面管理 ===== */
+.screen {
+  display: none;
+  width: 100%; height: 100%;
+  position: absolute; top: 0; left: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.screen.active { display: flex; }
+
+/* ===== 标题页 ===== */
+.title-content {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 16px;
+  padding: 24px;
+}
+.game-title {
+  font-size: 48px; font-weight: 800;
+  letter-spacing: 4px;
+  background: linear-gradient(135deg, #f093fb, #f5576c, #ffd200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+.game-subtitle {
+  font-size: 16px; color: #888;
+  letter-spacing: 2px;
+}
+.title-tiles {
+  display: flex; gap: 8px;
+  font-size: 40px; margin: 16px 0;
+}
+.demo-tile {
+  animation: bounce 1.5s ease infinite;
+}
+.demo-tile:nth-child(2) { animation-delay: 0.2s; }
+.demo-tile:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ===== 按钮 ===== */
+.btn-primary {
+  width: 220px; padding: 14px 32px;
+  font-size: 18px; font-weight: 700;
+  border: none; border-radius: 50px;
+  background: linear-gradient(135deg, #f5576c, #ff6a88);
+  color: #fff; cursor: pointer;
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn-primary:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(245, 87, 108, 0.3);
+}
+.btn-secondary {
+  width: 220px; padding: 12px 28px;
+  font-size: 15px; font-weight: 600;
+  border: 2px solid #444; border-radius: 50px;
+  background: transparent; color: #aaa; cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.btn-secondary:active { border-color: #888; color: #fff; }
+.btn-icon {
+  width: 36px; height: 36px;
+  font-size: 18px; border: none;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.btn-icon:active { background: rgba(255,255,255,0.15); }
+
+/* ===== 玩法说明 ===== */
+.how-content {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 24px;
+  padding: 32px; max-width: 360px;
+}
+.how-content h2 { font-size: 24px; }
+.how-steps {
+  display: flex; flex-direction: column; gap: 20px;
+  width: 100%;
+}
+.how-step {
+  display: flex; align-items: center; gap: 16px;
+  text-align: left;
+}
+.step-icon {
+  font-size: 28px; min-width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.06);
+  border-radius: 12px;
+}
+.how-step p { font-size: 14px; color: #ccc; line-height: 1.4; }
+
+/* ===== 游戏顶栏 ===== */
+.game-header {
+  width: 100%; padding: 8px 16px;
+  display: flex; align-items: center;
+  justify-content: space-between;
+  background: rgba(0,0,0,0.3);
+  z-index: 10;
+}
+.level-badge {
+  background: rgba(245,87,108,0.2);
+  color: #f5576c;
+  padding: 4px 12px; border-radius: 20px;
+  font-size: 13px; font-weight: 700;
+}
+.header-center {
+  font-size: 13px; color: #888;
+}
+.header-right {
+  display: flex; gap: 8px;
+}
+
+/* ===== 牌堆区域 ===== */
+.stack-area {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== 牌面样式 ===== */
+.tile {
+  position: absolute;
+  width: 48px; height: 48px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.12s;
+  border: 2px solid rgba(255,255,255,0.15);
+  background: #2a2a4a;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.tile.blocked {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.tile:not(.blocked):hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+.tile.selected {
+  animation: tilePickup 0.3s ease forwards;
+}
+@keyframes tilePickup {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(0.5); opacity: 0; }
+}
+
+/* ===== 槽位区域 ===== */
+.slot-area {
+  width: 100%;
+  padding: 8px 4px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  background: rgba(0,0,0,0.4);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.slot {
+  width: 44px; height: 44px;
+  border-radius: 8px;
+  border: 1.5px dashed rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  transition: background 0.15s;
+}
+.slot.filled {
+  border: 1.5px solid rgba(255,255,255,0.2);
+  background: #2a2a4a;
+}
+.slot.match-highlight {
+  animation: matchFlash 0.5s ease;
+}
+@keyframes matchFlash {
+  0% { background: #2a2a4a; }
+  50% { background: #f5576c; transform: scale(1.1); }
+  100% { background: #2a2a4a; transform: scale(1); }
+}
+
+/* ===== 广告位 ===== */
+.ad-banner {
+  width: 100%;
+  height: 50px;
+  background: rgba(0,0,0,0.3);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+
+/* ===== 广告插屏 ===== */
+.ad-overlay {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 8px;
+  padding: 24px;
+}
+.ad-timer-text {
+  font-size: 14px; color: #aaa;
+  margin-bottom: 4px;
+}
+
+/* ===== 结果页面 ===== */
+.result-content {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 20px;
+  padding: 32px;
+}
+.result-title {
+  font-size: 36px; font-weight: 800;
+}
+.result-msg {
+  font-size: 15px; color: #999;
+}
+
+/* ===== 响应式适配 ===== */
+@media (max-width: 380px) {
+  .game-title { font-size: 36px; }
+  .tile { width: 40px; height: 40px; font-size: 20px; }
+  .slot { width: 38px; height: 38px; font-size: 18px; }
+}
+@media (min-width: 500px) {
+  .tile { width: 56px; height: 56px; font-size: 28px; }
+  .slot { width: 50px; height: 50px; font-size: 24px; }
+}

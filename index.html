@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Tile Stack - Match 3 Puzzle</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🀄</text></svg>">
+
+  <!-- ===== Google AdSense ===== -->
+  <!-- 审核通过后，把 YOUR_PUB_ID 替换为你的 ca-pub-XXXXXXXXXX -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUB_ID" crossorigin="anonymous"></script>
+  <script async src="https://fundingchoicesmessages.google.com/i/ca-pub-YOUR_PUB_ID?ers=1"></script>
+</head>
+<body>
+  <!-- ===== 标题页 ===== -->
+  <div id="screen-title" class="screen active">
+    <div class="title-content">
+      <h1 class="game-title">TILE STACK</h1>
+      <p class="game-subtitle">Match 3 to Clear</p>
+      <div class="title-tiles">
+        <span class="demo-tile">🍒</span>
+        <span class="demo-tile">🍋</span>
+        <span class="demo-tile">🍒</span>
+      </div>
+      <button id="btn-play" class="btn-primary">PLAY</button>
+      <button id="btn-how" class="btn-secondary">HOW TO PLAY</button>
+    </div>
+  </div>
+
+  <!-- ===== 玩法说明 ===== -->
+  <div id="screen-how" class="screen">
+    <div class="how-content">
+      <h2>HOW TO PLAY</h2>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="step-icon">👆</div>
+          <p>Tap a tile on the top of the stack</p>
+        </div>
+        <div class="how-step">
+          <div class="step-icon">📥</div>
+          <p>It moves to the slots below</p>
+        </div>
+        <div class="how-step">
+          <div class="step-icon">✨3</div>
+          <p>Match 3 same tiles to clear them</p>
+        </div>
+        <div class="how-step">
+          <div class="step-icon">⚠️</div>
+          <p>Don't let all 7 slots fill up!</p>
+        </div>
+      </div>
+      <button id="btn-how-back" class="btn-secondary">GOT IT</button>
+    </div>
+  </div>
+
+  <!-- ===== 游戏页面 ===== -->
+  <div id="screen-game" class="screen">
+    <div class="game-header">
+      <div class="header-left">
+        <span id="level-label" class="level-badge">LEVEL 1</span>
+      </div>
+      <div class="header-center">
+        <span id="tiles-left">Tiles: 0</span>
+      </div>
+      <div class="header-right">
+        <button id="btn-undo" class="btn-icon" title="Undo">↩️</button>
+        <button id="btn-shuffle" class="btn-icon" title="Shuffle">🔀</button>
+      </div>
+    </div>
+    <div id="stack-area" class="stack-area"></div>
+    <div id="slot-area" class="slot-area">
+      <div id="slot-0" class="slot"></div>
+      <div id="slot-1" class="slot"></div>
+      <div id="slot-2" class="slot"></div>
+      <div id="slot-3" class="slot"></div>
+      <div id="slot-4" class="slot"></div>
+      <div id="slot-5" class="slot"></div>
+      <div id="slot-6" class="slot"></div>
+    </div>
+    <!-- 广告横幅（底部常驻） -->
+    <div id="ad-banner" class="ad-banner">
+      <ins class="adsbygoogle"
+        style="display:inline-block;width:320px;height:50px"
+        data-ad-client="ca-pub-YOUR_PUB_ID"
+        data-ad-slot="0987654321"></ins>
+    </div>
+  </div>
+
+  <!-- ===== 通关页 ===== -->
+  <div id="screen-win" class="screen">
+    <div class="result-content">
+      <h2 class="result-title">🎉 YOU WIN!</h2>
+      <p id="win-msg" class="result-msg">Ready for the real challenge?</p>
+      <button id="btn-next-level" class="btn-primary">NEXT LEVEL</button>
+      <button id="btn-share-win" class="btn-secondary">SHARE</button>
+    </div>
+  </div>
+
+  <!-- ===== 失败页 ===== -->
+  <div id="screen-lose" class="screen">
+    <div class="result-content">
+      <h2 class="result-title">😱 GAME OVER</h2>
+      <p class="result-msg">Slots are full!</p>
+      <button id="btn-revive" class="btn-primary">🎬 WATCH AD TO REVIVE</button>
+      <button id="btn-retry" class="btn-secondary">RETRY</button>
+    </div>
+  </div>
+
+  <!-- ===== 广告插屏 ===== -->
+  <div id="screen-ad" class="screen">
+    <div class="ad-overlay">
+      <p class="ad-timer-text">Ad loading...</p>
+      <ins class="adsbygoogle ad-interstitial"
+        style="display:block;width:300px;height:250px;margin:0 auto"
+        data-ad-client="ca-pub-YOUR_PUB_ID"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+      <button id="btn-skip-ad" class="btn-secondary" style="margin-top:12px">Skip Ad</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
