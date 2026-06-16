@@ -13,6 +13,9 @@
 <body>
   <!-- ===== 标题页 ===== -->
   <div id="screen-title" class="screen active">
+    <!-- BGM 开关按钮（标题页右上角） -->
+    <button id="btn-music" class="music-toggle" title="Toggle Music">🔊</button>
+
     <div class="title-content">
       <h1 class="game-title">TILE STACK</h1>
       <p class="game-subtitle">Match 3 to Clear</p>
@@ -22,6 +25,7 @@
         <span class="demo-tile">🍒</span>
       </div>
       <button id="btn-play" class="btn-primary">PLAY</button>
+      <button id="btn-continue" class="btn-secondary" style="display:none">CONTINUE</button>
       <button id="btn-how" class="btn-secondary">HOW TO PLAY</button>
     </div>
   </div>
@@ -64,6 +68,8 @@
       <div class="header-right">
         <button id="btn-undo" class="btn-icon" title="Undo">↩️</button>
         <button id="btn-shuffle" class="btn-icon" title="Shuffle">🔀</button>
+        <!-- 退出并保存 -->
+        <button id="btn-save-exit" class="btn-icon btn-save-exit" title="Save & Exit">💾</button>
       </div>
     </div>
     <div id="stack-area" class="stack-area"></div>

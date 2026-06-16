@@ -56,6 +56,25 @@ html, body {
   50% { transform: translateY(-12px); }
 }
 
+/* ===== BGM 开关按钮 ===== */
+.music-toggle {
+  position: absolute;
+  top: 16px; right: 16px;
+  width: 40px; height: 40px;
+  font-size: 20px;
+  border: 2px solid rgba(255,255,255,0.12);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  cursor: pointer;
+  z-index: 100;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+}
+.music-toggle:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.25);
+}
+
 /* ===== 按钮 ===== */
 .btn-primary {
   width: 220px; padding: 14px 32px;
@@ -84,8 +103,18 @@ html, body {
   background: rgba(255,255,255,0.08);
   border-radius: 50%; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s;
 }
 .btn-icon:active { background: rgba(255,255,255,0.15); }
+
+/* 退出并保存按钮（绿色高亮，区别于其他操作按钮） */
+.btn-save-exit {
+  background: rgba(76, 175, 80, 0.15);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+.btn-save-exit:active {
+  background: rgba(76, 175, 80, 0.3);
+}
 
 /* ===== 玩法说明 ===== */
 .how-content {
@@ -238,6 +267,7 @@ html, body {
   .game-title { font-size: 36px; }
   .tile { width: 40px; height: 40px; font-size: 20px; }
   .slot { width: 38px; height: 38px; font-size: 18px; }
+  .music-toggle { top: 12px; right: 12px; width: 34px; height: 34px; font-size: 16px; }
 }
 @media (min-width: 500px) {
   .tile { width: 56px; height: 56px; font-size: 28px; }
