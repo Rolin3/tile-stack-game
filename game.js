@@ -6,7 +6,7 @@
   'use strict';
 
   // ===== 配置 =====
-  const API_BASE = 'https://tile-stack-api.1070066278.workers.dev';
+  const API_BASE = 'https://tile-stack-api.tilestack-api.workers.dev';
 
   // 牌面图案（emoji 通用图标，全球玩家都能看懂）
   const 牌面类型 = [
