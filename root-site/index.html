@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tile Stack - Free Online Match 3 Puzzle Game</title>
+  <meta name="description" content="Tile Stack is a free online match-3 puzzle game. Tap tiles, match three identical symbols, and clear the stack before the slots fill up. Play now on any device!">
+  <meta name="keywords" content="Tile Stack, match 3, puzzle game, online game, free game, HTML5 game, tile matching, casual game, mobile game, brain teaser">
+  <meta name="author" content="Rolin3">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Tile Stack - Free Online Match 3 Puzzle Game">
+  <meta property="og:description" content="Match 3 tiles to clear the stack. A free, addictive puzzle game you can play in your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rolin3.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://rolin3.github.io/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F004;</text></svg>">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6156180492735752" crossorigin="anonymous"></script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1a1a2e;
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.7;
+    }
+    a { color: #ff6b81; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      padding: 64px 20px 48px;
+      text-align: center;
+      border-bottom: 1px solid #2a2a4a;
+    }
+    .hero h1 {
+      font-size: 48px;
+      background: linear-gradient(90deg, #ff6b81, #ffca28);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+    .hero .tagline {
+      font-size: 20px;
+      color: #b0b0d0;
+      max-width: 560px;
+      margin: 0 auto 32px;
+    }
+    .hero .demo-tiles {
+      font-size: 42px;
+      margin-bottom: 28px;
+      letter-spacing: 8px;
+    }
+    .btn-play {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff6b81, #ff4757);
+      color: #fff;
+      padding: 16px 48px;
+      border-radius: 12px;
+      font-size: 22px;
+      font-weight: bold;
+      box-shadow: 0 8px 24px rgba(255, 71, 87, 0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-play:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(255, 71, 87, 0.45);
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 48px 20px;
+    }
+
+    section { margin-bottom: 48px; }
+    h2 {
+      font-size: 28px;
+      color: #ffca28;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h3 {
+      font-size: 20px;
+      color: #ff6b81;
+      margin: 24px 0 10px;
+    }
+    p { margin-bottom: 14px; color: #c8c8e0; }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .feature-card {
+      background: #16213e;
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid #2a2a4a;
+    }
+    .feature-card .icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .feature-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+    .feature-card p {
+      font-size: 15px;
+      color: #a0a0c8;
+      margin: 0;
+    }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+    }
+    .steps li {
+      background: #16213e;
+      border-radius: 10px;
+      padding: 18px 20px 18px 64px;
+      margin-bottom: 14px;
+      position: relative;
+      border: 1px solid #2a2a4a;
+    }
+    .steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      background: #ff6b81;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .tips {
+      background: #16213e;
+      border-left: 4px solid #ffca28;
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+    }
+    .tips ul { margin-left: 20px; color: #c8c8e0; }
+    .tips li { margin-bottom: 8px; }
+
+    .cta-bottom {
+      text-align: center;
+      padding: 40px 20px 64px;
+      background: #16213e;
+      border-top: 1px solid #2a2a4a;
+    }
+    .cta-bottom p { color: #a0a0c8; margin-bottom: 20px; }
+
+    footer {
+      text-align: center;
+      padding: 24px 20px;
+      color: #8080a8;
+      font-size: 14px;
+      background: #111122;
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 36px; }
+      .hero .tagline { font-size: 17px; }
+      .btn-play { font-size: 18px; padding: 14px 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>&#x1F004; TILE STACK</h1>
+    <p class="tagline">A free, addictive match-3 puzzle game. Clear the tiles before the slots fill up!</p>
+    <div class="demo-tiles">&#x1F352; &#x1F34B; &#x1F352;</div>
+    <a class="btn-play" href="/tile-stack-game/">&#x25B6; PLAY NOW</a>
+  </header>
+
+  <main class="container">
+
+    <section>
+      <h2><span>&#x1F3AE;</span> About the Game</h2>
+      <p><strong>Tile Stack</strong> is a browser-based match-3 puzzle game inspired by the viral tile-matching mechanics you know and love. The goal is simple: tap open tiles to move them into your slots, collect three identical tiles to clear them, and empty the entire board before you run out of space.</p>
+      <p>Every level is carefully designed so that all tiles can be cleared, but the order you remove them matters. Tiles buried under others are locked until you free them from the top down. Plan your moves, use the tools wisely, and see how far you can go.</p>
+    </section>
+
+    <section>
+      <h2><span>&#x2B50;</span> Features</h2>
+      <div class="features">
+        <div class="feature-card">
+          <div class="icon">&#x1F4F1;</div>
+          <h3>Mobile Friendly</h3>
+          <p>Responsive design works smoothly on phones, tablets, and desktops.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">&#x1F3B5;</div>
+          <h3>Built-in BGM</h3>
+          <p>Toggle the cheerful 8-bit background music on or off anytime.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">&#x1F504;</div>
+          <h3>Undo & Shuffle</h3>
+          <p>Made a mistake? Undo it. Stuck? Shuffle the remaining tiles.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">&#x1F4C5;</div>
+          <h3>Daily Challenge</h3>
+          <p>Come back every day for a fresh deterministic level.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">&#x1F3C6;</div>
+          <h3>Leaderboard</h3>
+          <p>Compete with players around the world and share your score.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">&#x1F4BE;</div>
+          <h3>Save Progress</h3>
+          <p>Save your current game and continue later without losing progress.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span>&#x1F9D1;&#x200D;&#x1F3EB;</span> How to Play</h2>
+      <ol class="steps">
+        <li><strong>Tap an open tile</strong> on the top of the stack to move it into your slots.</li>
+        <li><strong>Collect 3 identical tiles</strong> in a row to clear them automatically.</li>
+        <li><strong>Clear all tiles</strong> before your 7 slots fill up to win the level.</li>
+        <li><strong>Use Undo and Shuffle</strong> when you need a second chance.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2><span>&#x1F9E0;</span> Tips to Win</h2>
+      <div class="tips">
+        <ul>
+          <li>Always prioritize tiles that are blocking the most other tiles underneath.</li>
+          <li>Keep your slots balanced — don't stack too many different tile types.</li>
+          <li>Save your Shuffle for moments when you have no safe moves left.</li>
+          <li>Plan a few moves ahead; the bottom layers often hide the trickiest tiles.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2><span>&#x1F4AC;</span> Why Play Tile Stack?</h2>
+      <p>Tile Stack is built for quick, satisfying sessions. Whether you have five minutes on the subway or an hour to unwind, the game scales to your schedule. No downloads, no sign-ups, and no paywalls — just pick up and play.</p>
+      <p>We are constantly improving the game with new features, better levels, and community feedback. If you enjoy it, share your score with friends and challenge them to beat your best level!</p>
+    </section>
+
+  </main>
+
+  <div class="cta-bottom">
+    <p>Ready to test your puzzle skills?</p>
+    <a class="btn-play" href="/tile-stack-game/">&#x25B6; PLAY TILE STACK NOW</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Tile Stack. Free online puzzle game. Hosted with GitHub Pages.</p>
+  </footer>
+
+</body>
+</html>

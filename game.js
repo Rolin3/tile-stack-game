@@ -947,7 +947,7 @@
 
     // 用户首次交互时尝试恢复 BGM（满足浏览器自动播放策略）
     const 尝试播放BGM = () => {
-      if (bgm偏好 === 'on' && !BGM._当前播放中) {
+      if (localStorage.getItem('tilestack_bgm') === 'on' && !BGM._当前播放中) {
         BGM.开始();
         BGM.同步开关UI(true);
       }
