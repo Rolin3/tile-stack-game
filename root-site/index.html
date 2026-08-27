@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tile Stack - Free Online Match 3 Puzzle Game</title>
-  <meta name="description" content="Tile Stack is a free online match-3 puzzle game. Tap tiles, match three identical symbols, and clear the stack before the slots fill up. Play now on any device!">
-  <meta name="keywords" content="Tile Stack, match 3, puzzle game, online game, free game, HTML5 game, tile matching, casual game, mobile game, brain teaser">
+  <title>Tile Stack - Free Online Match 3 Puzzle Game | Play Now</title>
+  <meta name="description" content="Tile Stack is a free online match-3 puzzle game. Tap tiles, match three identical symbols, and clear the stack before the slots fill up. No download, no sign-up. Play on mobile or desktop.">
+  <meta name="keywords" content="Tile Stack, match 3, puzzle game, online game, free game, HTML5 game, tile matching, casual game, mobile game, brain teaser, strategy game">
   <meta name="author" content="Rolin3">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="Tile Stack - Free Online Match 3 Puzzle Game">
@@ -15,9 +15,39 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://rolin3.github.io/">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F004;</text></svg>">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6156180492735752" crossorigin="anonymous"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Tile Stack",
+    "description": "A free online match-3 puzzle game where players tap open tiles, collect three identical symbols, and clear the board before slots fill up.",
+    "url": "https://rolin3.github.io/",
+    "gamePlatform": ["Web Browser", "Mobile Browser", "Desktop Browser"],
+    "applicationCategory": "Game",
+    "operatingSystem": "Any",
+    "author": {
+      "@type": "Person",
+      "name": "Rolin3"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Rolin3"
+    },
+    "genre": ["Puzzle", "Match-3", "Casual"],
+    "playMode": "SinglePlayer",
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -72,7 +102,7 @@
     }
 
     .container {
-      max-width: 840px;
+      max-width: 860px;
       margin: 0 auto;
       padding: 48px 20px;
     }
@@ -166,22 +196,59 @@
     }
     .cta-bottom p { color: #a0a0c8; margin-bottom: 20px; }
 
+    nav.site-nav {
+      background: #111122;
+      border-bottom: 1px solid #2a2a4a;
+      padding: 14px 20px;
+      text-align: center;
+    }
+    nav.site-nav a {
+      color: #b0b0d0;
+      margin: 0 14px;
+      font-size: 15px;
+    }
+    nav.site-nav a:hover { color: #ff6b81; }
+
+    .faq-item {
+      background: #16213e;
+      border: 1px solid #2a2a4a;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-bottom: 14px;
+    }
+    .faq-item strong {
+      color: #ffca28;
+      display: block;
+      margin-bottom: 6px;
+    }
+
     footer {
       text-align: center;
-      padding: 24px 20px;
+      padding: 32px 20px;
       color: #8080a8;
       font-size: 14px;
       background: #111122;
     }
+    footer a { margin: 0 10px; }
 
     @media (max-width: 480px) {
       .hero h1 { font-size: 36px; }
       .hero .tagline { font-size: 17px; }
       .btn-play { font-size: 18px; padding: 14px 36px; }
+      nav.site-nav a { margin: 0 8px; font-size: 14px; }
     }
   </style>
 </head>
 <body>
+
+  <nav class="site-nav">
+    <a href="/">Home</a>
+    <a href="/guide.html">Guide</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/blog.html">Updates</a>
+    <a href="/about.html">About</a>
+    <a href="/privacy.html">Privacy</a>
+  </nav>
 
   <header class="hero">
     <h1>&#x1F004; TILE STACK</h1>
@@ -195,7 +262,7 @@
     <section>
       <h2><span>&#x1F3AE;</span> About the Game</h2>
       <p><strong>Tile Stack</strong> is a browser-based match-3 puzzle game inspired by the viral tile-matching mechanics you know and love. The goal is simple: tap open tiles to move them into your slots, collect three identical tiles to clear them, and empty the entire board before you run out of space.</p>
-      <p>Every level is carefully designed so that all tiles can be cleared, but the order you remove them matters. Tiles buried under others are locked until you free them from the top down. Plan your moves, use the tools wisely, and see how far you can go.</p>
+      <p>Every level is carefully designed so that all tiles can be cleared, but the order you remove them matters. Tiles buried under others are locked until you free them from the top down. Plan your moves, use the tools wisely, and see how far you can go. The game runs entirely in your browser — no download, no account, and no paywall.</p>
     </section>
 
     <section>
@@ -242,6 +309,7 @@
         <li><strong>Clear all tiles</strong> before your 7 slots fill up to win the level.</li>
         <li><strong>Use Undo and Shuffle</strong> when you need a second chance.</li>
       </ol>
+      <p>Need more help? Read the full <a href="/guide.html">Tile Stack Strategy Guide</a>.</p>
     </section>
 
     <section>
@@ -252,14 +320,60 @@
           <li>Keep your slots balanced — don't stack too many different tile types.</li>
           <li>Save your Shuffle for moments when you have no safe moves left.</li>
           <li>Plan a few moves ahead; the bottom layers often hide the trickiest tiles.</li>
+          <li>Use Undo to recover from accidental taps, especially on mobile.</li>
         </ul>
       </div>
+    </section>
+
+    <section>
+      <h2><span>&#x2753;</span> Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <strong>Is Tile Stack free to play?</strong>
+        Yes, the game is 100% free. You can play directly in your browser without downloading anything or creating an account.
+      </div>
+      <div class="faq-item">
+        <strong>Does it work on mobile?</strong>
+        Yes. Tile Stack uses a responsive layout and touch-friendly controls, so it works on iOS, Android, and desktop browsers.
+      </div>
+      <div class="faq-item">
+        <strong>Can I save my progress?</strong>
+        Yes. Your progress is saved locally in the browser, so you can continue where you left off.
+      </div>
+      <p>See all questions on the <a href="/faq.html">full FAQ page</a>.</p>
     </section>
 
     <section>
       <h2><span>&#x1F4AC;</span> Why Play Tile Stack?</h2>
       <p>Tile Stack is built for quick, satisfying sessions. Whether you have five minutes on the subway or an hour to unwind, the game scales to your schedule. No downloads, no sign-ups, and no paywalls — just pick up and play.</p>
       <p>We are constantly improving the game with new features, better levels, and community feedback. If you enjoy it, share your score with friends and challenge them to beat your best level!</p>
+    </section>
+
+    <section>
+      <h2><span>&#x1F393;</span> Game Modes</h2>
+      <p>Tile Stack offers multiple ways to play, depending on your mood and available time:</p>
+      <div class="features">
+        <div class="feature-card">
+          <div class="icon">&##x1F3AE;</div>
+          <h3>Classic Mode</h3>
+          <p>Play through an endless series of procedurally generated levels. Each level gets progressively harder as you advance. Your progress is saved automatically.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">&##x1F4C5;</div>
+          <h3>Daily Challenge</h3>
+          <p>The same fixed level for every player each day. Compete on the global leaderboard and compare your strategy with friends playing the exact same board.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">&##x1F3C6;</div>
+          <h3>Leaderboard</h3>
+          <p>See how you rank against players worldwide. Submit your best scores from Daily Challenges and climb the global rankings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span>&#x1F31F;</span> Join the Community</h2>
+      <p>Tile Stack is played by puzzle enthusiasts around the world. Whether you are a casual player looking for a quick mental break or a dedicated solver aiming for the top of the leaderboard, you are part of a growing community that values skill, strategy, and respect for the player's time.</p>
+      <p>Have feedback? Found a bug? Want to suggest a feature? We would love to hear from you. Visit our <a href="/about.html">About page</a> for ways to get in touch, or check out the <a href="/blog.html">blog</a> for the latest development updates, strategy guides, and discussions about tile-matching games and puzzle design.</p>
     </section>
 
   </main>
@@ -270,6 +384,14 @@
   </div>
 
   <footer>
+    <p>
+      <a href="/">Home</a>
+      <a href="/guide.html">Guide</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/blog.html">Updates</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </p>
     <p>&copy; 2026 Tile Stack. Free online puzzle game. Hosted with GitHub Pages.</p>
   </footer>
 

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tile Stack Blog - Game Strategy, Updates & Puzzle Insights</title>
+  <meta name="description" content="Read in-depth articles about match-3 puzzle games, tile-matching strategy, browser game development, and the latest Tile Stack updates.">
+  <meta name="keywords" content="Tile Stack blog, match 3 strategy, tile matching games, puzzle game tips, HTML5 game development, mahjong solitaire, browser games, casual gaming">
+  <meta name="author" content="Rolin3">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Tile Stack Blog - Strategy & Insights">
+  <meta property="og:description" content="In-depth articles about match-3 puzzle games, strategy tips, and development behind Tile Stack.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rolin3.github.io/blog.html">
+  <link rel="canonical" href="https://rolin3.github.io/blog.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F004;</text></svg>">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1a1a2e;
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.8;
+    }
+    a { color: #ff6b81; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav.site-nav {
+      background: #111122;
+      border-bottom: 1px solid #2a2a4a;
+      padding: 14px 20px;
+      text-align: center;
+    }
+    nav.site-nav a { color: #b0b0d0; margin: 0 14px; font-size: 15px; }
+    nav.site-nav a:hover { color: #ff6b81; }
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      padding: 56px 20px 40px;
+      text-align: center;
+      border-bottom: 1px solid #2a2a4a;
+    }
+    header h1 {
+      font-size: 38px;
+      background: linear-gradient(90deg, #ff6b81, #ffca28);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+    header p { color: #b0b0d0; max-width: 560px; margin: 0 auto; font-size: 18px; }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 20px;
+    }
+    .post {
+      background: #16213e;
+      border: 1px solid #2a2a4a;
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+    .post .date {
+      color: #8080a8;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .post h2 {
+      font-size: 24px;
+      color: #ffca28;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .post h3 {
+      font-size: 19px;
+      color: #ff6b81;
+      margin: 24px 0 10px;
+    }
+    .post p { color: #c8c8e0; margin-bottom: 16px; }
+    .post ul, .post ol { margin: 12px 0 20px 26px; color: #c8c8e0; }
+    .post li { margin-bottom: 10px; }
+    .post strong { color: #fff; }
+    .post blockquote {
+      border-left: 4px solid #ffca28;
+      padding: 12px 20px;
+      margin: 20px 0;
+      background: #1a1a2e;
+      border-radius: 0 8px 8px 0;
+      color: #a0a0c8;
+      font-style: italic;
+    }
+    .tag {
+      display: inline-block;
+      background: #2a2a4a;
+      color: #b0b0d0;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+    .tags { margin-top: 16px; }
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      color: #8080a8;
+      font-size: 14px;
+      background: #111122;
+    }
+    footer a { margin: 0 10px; }
+    @media (max-width: 480px) {
+      header h1 { font-size: 30px; }
+      nav.site-nav a { margin: 0 8px; font-size: 14px; }
+      .post { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/">Home</a>
+    <a href="/guide.html">Guide</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/blog.html">Updates</a>
+    <a href="/about.html">About</a>
+    <a href="/privacy.html">Privacy</a>
+  </nav>
+
+  <header>
+    <h1>Tile Stack Blog</h1>
+    <p>Strategy guides, game design insights, development stories, and puzzle community discussions.</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Article 1: What Are Tile-Matching Games -->
+    <article class="post">
+      <div class="date">August 27, 2026</div>
+      <h2>What Are Tile-Matching Games? A Complete Beginner's Guide</h2>
+      <div class="tags"><span class="tag">Game Guide</span><span class="tag">Beginners</span><span class="tag">History</span></div>
+
+      <p>If you have ever found yourself obsessively tapping tiles on your phone screen, trying to match three identical symbols before your slots fill up, you have experienced the addictive appeal of tile-matching games. But what exactly are these games, where did they come from, and why do millions of players keep coming back to them?</p>
+
+      <h3>The Origins: From Mahjong Solitaire to Mobile Screens</h3>
+      <p>Tile-matching games trace their roots back to <strong>Mahjong Solitaire</strong>, a computerized adaptation of the traditional Chinese tile game Mahjong. In 1981, Brodie Lockard created the first computer version of Mahjong Solitaire on the PLATO system. The concept was simple yet brilliant: instead of playing Mahjong against opponents with complex rules, you simply match identical open tiles to clear the board.</p>
+      <p>The genre evolved significantly over the following decades. The release of <strong>"Shanghai"</strong> by Activision in 1986 brought Mahjong Solitaire to mainstream audiences. By the 2000s, free online Flash versions made the genre accessible to anyone with a web browser. The mobile gaming explosion of the 2010s transformed tile-matching from a casual pastime into a global phenomenon.</p>
+
+      <h3>How Modern Tile-Matching Games Work</h3>
+      <p>Today's tile-matching games share a common core mechanic but add modern twists:</p>
+      <ul>
+        <li><strong>The Board:</strong> Tiles are stacked in layers, often 5-7 levels deep. Only tiles with nothing on top of them are "open" and can be selected.</li>
+        <li><strong>The Slots:</strong> You typically have 7 slots at the bottom of the screen. Each selected tile goes into a slot.</li>
+        <li><strong>The Match:</strong> When three identical tiles accumulate in your slots, they automatically disappear, freeing up space.</li>
+        <li><strong>The Loss Condition:</strong> If all 7 slots fill up with no possible three-of-a-kind match, the game ends.</li>
+        <li><strong>Power Tools:</strong> Most modern games include Undo (reverse your last move), Shuffle (rearrange remaining tiles), and sometimes hints or bonus abilities.</li>
+      </ul>
+
+      <h3>Why These Games Are So Addictive</h3>
+      <p>The psychology behind tile-matching games is fascinating. Several factors contribute to their "just one more level" appeal:</p>
+      <ol>
+        <li><strong>Cognitive Flow:</strong> The gameplay creates a perfect balance between challenge and skill. Each move requires just enough thought to be engaging but not so much that it becomes frustrating.</li>
+        <li><strong>Satisfying Feedback:</strong> The visual and sometimes auditory feedback when three tiles match triggers the brain's reward system. It is a small, consistent dopamine hit that keeps you playing.</li>
+        <li><strong>Progressive Depth:</strong> Early moves feel easy and rewarding, but as the board clears, each decision becomes more critical. This difficulty curve naturally hooks players deeper into the game.</li>
+        <li><strong>Completion Urge:</strong> Seeing a nearly cleared board with just a few tiles left creates a powerful psychological drive to finish what you started.</li>
+      </ol>
+
+      <h3>Popular Games in the Genre</h3>
+      <p>Beyond Tile Stack, several titles have defined the tile-matching genre:</p>
+      <ul>
+        <li><strong>3 Tiles (Puzzle Master):</strong> One of the most popular mobile tile-matching games, known for its polished UI and thousands of levels.</li>
+        <li><strong>Mahjong Solitaire classic:</strong> The traditional version using actual Mahjong tile designs (bamboo, characters, circles, winds, dragons).</li>
+        <li><strong>Tile Busters:</strong> Adds power-ups and themed tile sets to the core mechanic.</li>
+        <li><strong>Match Tile Scenery:</strong> Combines tile-matching with travel-themed decoration rewards.</li>
+      </ul>
+
+      <blockquote>The best tile-matching games are not about luck — they are about recognizing patterns, planning ahead, and managing limited resources. Every loss is a lesson, and every win feels earned.</blockquote>
+
+      <p>Whether you are a complete beginner or an experienced player looking to understand the genre better, tile-matching games offer something rare in modern gaming: a pure, focused puzzle experience that respects your intelligence and your time.</p>
+    </article>
+
+    <!-- Article 2: Advanced Strategy -->
+    <article class="post">
+      <div class="date">August 25, 2026</div>
+      <h2>10 Advanced Strategies That Will Transform Your Tile Stack Game</h2>
+      <div class="tags"><span class="tag">Strategy</span><span class="tag">Advanced</span><span class="tag">Tips</span></div>
+
+      <p>You know the basics: tap open tiles, collect three of a kind, do not let your slots fill up. But once you have played dozens of levels, you start noticing that some players consistently clear boards that seem impossible. What do they know that you don not? Here are ten advanced strategies that separate casual players from true masters.</p>
+
+      <h3>1. The Keystone Tile Principle</h3>
+      <p>Not all open tiles are created equal. Before tapping anything, scan the entire board for <strong>keystone tiles</strong> — single tiles whose removal will unlock 3 or more hidden tiles beneath them. A keystone tile that exposes an entire column is almost always your best first move, even if it is not the most convenient match for your current slots. Think of each tap as an investment: which tile gives you the highest return in terms of future options?</p>
+
+      <h3>2. Slot Diversity Management</h3>
+      <p>This is the single most important skill in tile-matching. Your seven slots are your most precious resource. The golden rule: <strong>never hold more than 4 different tile types in your slots simultaneously</strong>. If you have 5, 6, or 7 different types, you are one unlucky draw away from a full slot disaster. Ideally, keep only 2-3 types and aggressively clear pairs when the third copy arrives.</p>
+
+      <h3>3. The Pair-Trapping Technique</h3>
+      <p>When you have two copies of a tile in your slots, you are "trapping" for the third. This is powerful but dangerous. The advanced player knows how to manage <strong>multiple simultaneous traps</strong>. If you have two different pairs waiting for their third copies, you need high confidence that both thirds are accessible within the next few moves. If not, clear one pair first to free up slot space.</p>
+
+      <h3>4. Layer-Aware Reading</h3>
+      <p>Beginners look at the top layer. Experts visualize all layers simultaneously. Train yourself to mentally "see through" the top tiles and understand what lies beneath. When considering a move, ask: "What does this reveal, and does that help me or hurt me?" Sometimes the best move is one that reveals nothing useful now but sets up a chain of unlocks for later.</p>
+
+      <h3>5. The Shuffle Sweet Spot</h3>
+      <p>Shuffle is your emergency tool, but timing is everything. Using Shuffle too early wastes its potential. Using it too late means you may not have enough slot space to benefit from the rearrangement. The sweet spot is when you have <strong>3-4 empty slots</strong> and the remaining board has 15+ tiles with no obvious safe moves. Shuffle is least effective when you have 1-2 slots left — the rearrangement rarely helps when you are that constrained.</p>
+
+      <h3>6. Undo Window Optimization</h3>
+      <p>Undo is most valuable in the first 3 seconds after a mistake. If you tap the wrong tile and immediately realize it, undo right away. The longer you play after a bad move, the more the board state diverges from the point where the error occurred, making the undo less useful. Pro players develop a reflex: bad tap → instant undo → reassess.</p>
+
+      <h3>7. Endgame Pattern Recognition</h3>
+      <p>The last 10-15 tiles of any level follow predictable patterns. At this stage, stop thinking about "what to tap" and start thinking about "what order clears everything." Count the remaining sets. If you have 12 tiles left, that is exactly 4 sets — there is a perfect sequence that clears them all. Your job is to find it before you make a move that closes off that path.</p>
+
+      <h3>8. Daily Challenge Memorization</h3>
+      <p>Daily Challenges use a fixed seed, meaning the board layout is identical for every player on a given day. This changes the strategy completely: you can replay, memorize the layout, and optimize your approach. Top leaderboard players often play the same daily challenge 3-5 times, each time improving their move order based on what they learned from previous attempts.</p>
+
+      <h3>9. Risk-Reward Calculation for Middle Layers</h3>
+      <p>Sometimes you face a choice: take a safe tile from the top layer, or take a riskier tile from a middle layer that might unlock something valuable. The advanced player quickly calculates: "What is the probability this risky move pays off versus the cost if it doesn't?" If the risky tile has a 70%+ chance of revealing useful tiles and you have 4+ empty slots, it is often worth the gamble.</p>
+
+      <h3>10. Emotional Discipline</h3>
+      <p>This sounds soft but it is critical. Tile-matching games are designed to create mild frustration that pushes you toward impulsive moves. When you feel rushed or annoyed, you make worse decisions. The best players consciously slow down when they feel emotional pressure. Take a breath. Reassess the board. Then make your move.</p>
+
+      <blockquote>Mastering these strategies takes practice. Do not try to implement all ten at once — pick one per gaming session and focus on it until it becomes automatic.</blockquote>
+    </article>
+
+    <!-- Article 3: How Tile Stack Was Built -->
+    <article class="post">
+      <div class="date">August 20, 2026</div>
+      <h2>Building Tile Stack: A Solo Developer's Journey from Idea to Launch</h2>
+      <div class="tags"><span class="tag">Development</span><span class="tag">Indie</span><span class="tag">Behind the Scenes</span></div>
+
+      <p>Every game starts with a moment of inspiration. For Tile Stack, that moment came during a commute, playing a popular tile-matching mobile game and thinking: "This is fun, but why do I need to download an app, watch 30-second ads every level, and deal with energy systems? Why can't I just... play?" That question became a weekend project, which became a month-long build, which became the game you see today.</p>
+
+      <h3>The Tech Stack: Keeping It Simple</h3>
+      <p>One of the core principles from day one was <strong>zero dependencies</strong>. Tile Stack is built with vanilla HTML, CSS, and JavaScript — no frameworks, no bundlers, no build steps. This decision was intentional:</p>
+      <ul>
+        <li><strong>Instant loading:</strong> No framework overhead means the game loads in under a second on most connections.</li>
+        <li><strong>Maximum compatibility:</strong> Pure web standards work everywhere — Chrome, Safari, Firefox, Edge, mobile browsers, even older devices.</li>
+        <li><strong>Easy maintenance:</strong> No dependency updates, no breaking changes from library versions, no security patches for third-party code.</li>
+        <li><strong>Full control:</strong> Every pixel, every animation, every interaction is hand-crafted. There is no fighting against a framework's opinions.</li>
+      </ul>
+
+      <h3>The Hardest Problems</h3>
+      <p>Building a tile-matching game sounds simple, but several technical challenges required serious thought:</p>
+      <p><strong>Tile Stacking Algorithm:</strong> How do you generate a solvable board where tiles are stacked in layers? The solution uses a "layer-by-layer placement" algorithm that ensures every tile is ultimately reachable and that exactly three copies of each tile type exist. The algorithm also verifies solvability by running a solver check before serving the level to the player.</p>
+      <p><strong>Touch vs. Click Handling:</strong> Mobile players tap, desktop players click, and the behavior needs to feel native on both. The game uses pointer events with careful handling of touch delay, preventing the dreaded 300ms mobile tap lag while maintaining desktop precision.</p>
+      <p><strong>State Management Without a Framework:</strong> With 6 screens (title, how-to-play, game, win, lose, ad), each with different states, managing game state in plain JavaScript requires discipline. The solution uses a simple state machine pattern with explicit transitions — no implicit state, no "UI reflects data" magic, just clear, debuggable code.</p>
+
+      <h3>The Backend: Cloudflare Workers + KV</h3>
+      <p>For features that require server logic — daily challenges, leaderboards, ad verification — Tile Stack uses <strong>Cloudflare Workers</strong> paired with <strong>KV (Key-Value) storage</strong>. This combination offers:</p>
+      <ul>
+        <li><strong>Global edge deployment:</strong> Workers run in data centers worldwide, so API latency is minimal regardless of where players are located.</li>
+        <li><strong>Pay-per-request pricing:</strong> For a small indie game, this is far more cost-effective than running a traditional server 24/7.</li>
+        <li><strong>Simple data model:</strong> KV is perfect for leaderboards (score rankings), daily challenge seeds (one key per date), and ad verification tokens.</li>
+      </ul>
+
+      <h3>Design Philosophy</h3>
+      <p>Three principles guided every design decision:</p>
+      <ol>
+        <li><strong>Respect the player's time:</strong> No forced ads mid-game. No energy systems. No "wait 30 minutes or pay" mechanics. The player should always be one tap away from playing.</li>
+        <li><strong>Skill over luck:</strong> Every generated level is verified to be solvable. The player should never lose because the game dealt them an unwinnable hand.</li>
+        <li><strong>Polish matters:</strong> Smooth animations, satisfying match effects, responsive layout, and thoughtful color choices turn a functional game into one that feels good to play.</li>
+      </ol>
+
+      <h3>What Is Next?</h3>
+      <p>Tile Stack is far from finished. The roadmap includes new tile themes, sound effect improvements, additional power-up types, social features for challenging friends, and possibly a progressive campaign mode with hand-crafted levels. The goal remains the same: build the cleanest, most respectful tile-matching experience on the web.</p>
+
+      <blockquote>The biggest lesson from building Tile Stack? You do not need a team of 50 or a million-dollar budget to make something people enjoy. You need clarity about what you are building, respect for your players, and the willingness to polish the details that most users will never consciously notice but will somehow feel.</blockquote>
+    </article>
+
+    <!-- Article 4: Psychology of Puzzle Games -->
+    <article class="post">
+      <div class="date">August 15, 2026</div>
+      <h2>The Hidden Psychology: Why Puzzle Games Like Tile Stack Keep You Coming Back</h2>
+      <div class="tags"><span class="tag">Psychology</span><span class="tag">Game Design</span><span class="tag">Behavior</span></div>
+
+      <p>Have you ever told yourself "just one more level" only to realize an hour has passed? Have you ever lost a game, immediately hit restart, and found yourself unable to put your phone down until you won? This is not an accident. Puzzle games like Tile Stack are carefully designed to engage specific psychological patterns that make them deeply compelling.</p>
+
+      <h3>The Flow State Connection</h3>
+      <p>Psychologist Mihaly Csikszentmihalyi coined the term <strong>"flow"</strong> to describe a mental state of complete immersion in an activity. Tile-matching games are flow-state machines. The challenge level scales precisely with your skill: early moves are easy (building confidence), middle moves require attention (creating engagement), and late moves demand focus (producing intensity). The game keeps you in the channel between boredom (too easy) and anxiety (too hard) — exactly where flow happens.</p>
+
+      <h3>The Zeigarnik Effect: Unfinished Business</h3>
+      <p>Bluma Zeigarnik discovered that people remember incomplete tasks better than completed ones. This <strong>Zeigarnik Effect</strong> explains why an unfinished Tile Stack level feels so nagging. The partially cleared board, the slots with pending pairs, the tiles still buried — they represent "open loops" in your brain that demand closure. Winning closes the loop and provides relief. Losing leaves the loop open, creating a powerful motivation to try again.</p>
+
+      <h3>Variable Reward Schedules</h3>
+      <p>B.F. Skinner's research on operant conditioning showed that <strong>variable-ratio schedules</strong> (rewards given unpredictably) create the most persistent behavior. Tile-matching games leverage this: you never know exactly which tile you will uncover next. Sometimes it is the exact tile you needed (reward!). Sometimes it is the worst possible tile (frustration that drives another attempt). This unpredictability is more addictive than predictable reward patterns.</p>
+
+      <h3>The Endowment Effect and Sunk Cost</h3>
+      <p>Once you have invested time and mental effort into a level, you feel a sense of ownership over your progress. This <strong>endowment effect</strong> makes quitting feel like a loss. Combined with <strong>sunk cost fallacy</strong> ("I have already spent 10 minutes on this level, I can't quit now"), players persist far longer than they would in a neutral context. Good game design uses these biases ethically — the persistence feels like determination, not manipulation.</p>
+
+      <h3>Cognitive Closure and Pattern Completion</h3>
+      <p>The human brain loves completing patterns. Seeing nearly-matched sets in your slots, seeing a board that is almost clear — these visual representations of "almost complete" trigger a powerful cognitive drive for closure. The three-of-a-kind matching mechanic is basically a pattern completion engine, and our brains are wired to find pattern completion deeply satisfying.</p>
+
+      <h3>Playing Mindfully: Enjoying the Hook Without Being Caught</h3>
+      <p>Understanding these mechanisms does not make games less enjoyable — it can actually enhance appreciation for good design. Next time you play, notice: When do you feel flow? What keeps you coming back after a loss? Being aware of these patterns lets you enjoy the intentional craftsmanship while maintaining conscious control over your gaming time.</p>
+
+      <blockquote>The best puzzle games do not manipulate players — they create structured experiences that naturally engage the brain's reward systems. The difference is respect: good games earn your time rather than stealing it.</blockquote>
+    </article>
+
+    <!-- Article 5: Browser Games in 2026 -->
+    <article class="post">
+      <div class="date">August 10, 2026</div>
+      <h2>Why Browser Games Are Making a Comeback in 2026</h2>
+      <div class="tags"><span class="tag">Industry</span><span class="tag">HTML5</span><span class="tag">Trends</span></div>
+
+      <p>Remember when browser games meant Flash websites with cheesy banners and questionable quality? Those days are gone. In 2026, browser gaming is experiencing a renaissance driven by technological improvements, changing user preferences, and a growing fatigue with app store ecosystems. Here is why the future looks bright for games like Tile Stack that live in your browser.</p>
+
+      <h3>The Death of Flash Created an Opportunity</h3>
+      <p>When Adobe officially ended Flash support in December 2020, thousands of browser games disappeared overnight. But this vacuum created space for a new generation built on <strong>HTML5, CSS3, and modern JavaScript</strong>. Today's browser games are faster, more secure, and work seamlessly across all devices without any plugins. What was once a limitation (no Flash) became an innovation driver.</p>
+
+      <h3>App Store Fatigue Is Real</h3>
+      <p>Mobile app stores have become crowded, expensive, and increasingly hostile to both developers and users:</p>
+      <ul>
+        <li><strong>Users</strong> are tired of 100MB downloads, permission requests, subscription pop-ups, and apps that demand account creation before letting you play.</li>
+        <li><strong>Developers</strong> face 30% revenue cuts, opaque approval processes, and constant algorithm changes that can destroy overnight what took years to build.</li>
+        <li><strong>Browser games</strong> bypass all of this: zero download, one-tap play, no permissions, no app store middleman.</li>
+      </ul>
+
+      <h3>Web Technologies Finally Grew Up</h3>
+      <p>The gap between "native app performance" and "web performance" has narrowed dramatically:</p>
+      <ul>
+        <li><strong>WebGL and WebGPU</strong> enable console-quality 3D graphics in browsers.</li>
+        <li><strong>Web Audio API</strong> provides professional-grade sound capabilities.</li>
+        <li><strong>Service Workers</strong> enable offline functionality and instant loading on repeat visits.</li>
+        <li><strong>WebAssembly</strong> allows near-native execution speed for performance-critical game logic.</li>
+        <li><strong>CSS animations and Canvas API</strong> deliver smooth 60fps visuals without external libraries.</li>
+      </ul>
+      <p>For a 2D puzzle game like Tile Stack, these technologies mean the browser experience is indistinguishable from a native app — except for the part where you had to download nothing.</p>
+
+      <h3>The Discovery Problem and Its Solutions</h3>
+      <p>The historical weakness of browser games was discovery — how do players find you without an app store featuring you? In 2026, several channels have emerged:</p>
+      <ol>
+        <li><strong>Search Engine Optimization:</strong> Well-designed game websites with quality content (like this one!) rank in Google searches for game-related queries.</li>
+        <li><strong>Social Sharing:</strong> A URL is infinitely more shareable than an app store link. "Try this game" works when it leads to an instant-play page.</li>
+        <li><strong>Gaming Portals and Aggregators:</strong> Curated collections of quality browser games are growing in popularity as players seek alternatives to app stores.</li>
+        <li><strong>Direct Traffic:</strong> Players who bookmark your game return directly — no algorithm deciding whether to show your icon.</li>
+      </ol>
+
+      <h3>What This Means for Players</h3>
+      <p>The browser gaming renaissance is a win for players. More competition means better games. Lower distribution costs mean developers can focus on quality instead of marketing spend. And the simplicity of "click and play" means gaming is once again accessible to everyone, regardless of device storage, app store account, or technical expertise.</p>
+
+      <blockquote>The browser is the most universal gaming platform ever created. Every device with a screen and an internet connection is a potential gaming device. That is a market bigger than any single console, bigger than iOS, bigger than Android. And it is wide open.</blockquote>
+    </article>
+
+    <!-- Article 6: Daily Challenge Design -->
+    <article class="post">
+      <div class="date">August 5, 2026</div>
+      <h2>Daily Challenges: The Game Design Secret That Builds Habitual Players</h2>
+      <div class="tags"><span class="tag">Game Design</span><span class="tag">Daily Challenge</span><span class="tag">Engagement</span></div>
+
+      <p>Among all the features in Tile Stack — undo, shuffle, save/progress, leaderboards — the one that drives the most consistent returning players is deceptively simple: the <strong>Daily Challenge</strong>. A single level that resets every 24 hours. Same board for everyone. One chance to get your best score. Why does such a basic feature create such strong player habits?</p>
+
+      <h3>Scarcity Creates Value</h3>
+      <p>In economics, scarcity increases perceived value. The same applies to games. When a level is always available, there is no urgency to play it today. But when a Daily Challenge disappears at midnight and is gone forever, suddenly today matters. This artificial scarcity transforms a casual game into a daily ritual for many players.</p>
+
+      <h3>Social Comparison Through Shared Experience</h3>
+      <p>Because every player gets the same Daily Challenge board, scores are directly comparable. When you tell a friend "I cleared today's challenge in 3 minutes," that means something concrete because they faced the exact same board. This shared experience enables organic social interaction that feels meaningful rather than forced.</p>
+
+      <h3>The Skill-Building Loop</h3>
+      <p>Daily Challenges serve as perfect practice grounds. Since the board is fixed, players can retry, learn, and improve on the exact same layout. This creates a micro skill-building loop: play → analyze failures → develop a better strategy → apply it → improve score. Over weeks and months, this daily practice compounds into significant skill growth that transfers to regular levels too.</p>
+
+      <h3>How Tile Stack Generates Daily Levels</h3>
+      <p>Technically, Daily Challenges use a <strong>deterministic seeded random generator</strong>. The current date (in UTC) is converted to a seed value that feeds into the board generation algorithm. This guarantees that:</p>
+      <ul>
+        <li>Every player anywhere in the world gets the same board on the same calendar day.</li>
+        <li>The board is different every day (different seed = different layout).</li>
+        <li>The board is always verified solvable before being served.</li>
+        <li>Past challenges cannot be replayed (the seed is tied to the date).</li>
+      </ul>
+
+      <h3>Designing for the Daily Player</h3>
+      <p>Daily Challenges are carefully tuned differently from regular levels:</p>
+      <ul>
+        <li><strong>Difficulty:</strong> Slightly harder than average regular levels — daily players want a meaningful challenge, not a giveaway.</li>
+        <li><strong>Length:</strong> Designed to take 5-10 minutes for skilled players — long enough to feel substantial, short enough to fit into a daily routine.</li>
+        <li><strong>Memorability:</strong> Each daily board tends to have at least one memorable "trick" or key insight that makes it unique and discussable.</li>
+        <li><strong>Leaderboard Integration:</strong> Daily scores feed the global leaderboard, adding competitive stakes beyond personal satisfaction.</li>
+      </ul>
+
+      <p>The Daily Challenge is more than a feature — it is a relationship between the game and the player. It says "come back tomorrow, we'll have something new for you." And for thousands of players, that promise is enough to make Tile Stack part of their daily routine.</p>
+    </article>
+
+    <!-- Article 7: Match-3 vs Classic Solitaire -->
+    <article class="post">
+      <div class="date">July 28, 2026</div>
+      <h2>Match-3 Tile Games vs. Classic Solitaire: Which Puzzle Style Fits You?</h2>
+      <div class="tags"><span class="tag">Comparison</span><span class="tag">Game Types</span><span class="tag">Beginners</span></div>
+
+      <p>If you enjoy puzzle games, you have probably played both classic card solitaire and modern tile-matching games like Tile Stack. At first glance, they seem quite different — cards versus tiles, foundations versus slots. But beneath the surface, these two puzzle genres share deep structural similarities while offering distinctly different experiences. Understanding these differences helps you choose the right game for your mood.</p>
+
+      <h3>Shared DNA: The Core Similarities</h3>
+      <p>Both genres are fundamentally about <strong>managing limited space to organize disordered elements</strong>:</p>
+      <ul>
+        <li><strong>Limited Capacity:</strong> Solitaire has 7 tableau piles; tile games have 7 slots. Run out of organized space in either, and you lose.</li>
+        <li><strong>Revealing Hidden Information:</strong> In solitaire, you flip face-down cards. In tile games, you uncover buried tiles. Both create a satisfying progression from unknown to known.</li>
+        <li><strong>Rule-Based Clearing:</strong> Solitaire clears cards by alternating colors and descending ranks. Tile games clear by matching three-of-a-kind. Both provide satisfying "clear" moments.</li>
+        <li><strong>Skill Determines Outcome:</strong> Neither game is pure luck. Better players win more consistently in both genres.</li>
+      </ul>
+
+      <h3>Key Differences That Change Everything</h3>
+      <p>Despite the shared structure, the experience differs in important ways:</p>
+      <p><strong>Information Availability:</strong> In solitaire, you can see all the face-up cards on the table at once. In tile games, you can only see the top layer — everything below is hidden until you uncover it. This makes tile games more about managing uncertainty, while solitaire is more about optimizing known information.</p>
+      <p><strong>Pace and Rhythm:</strong> Solitaire tends to be a slower, more contemplative experience. Tile games, especially on mobile, encourage faster decision-making. The tap-tap-tap rhythm of tile matching creates a different mental state than the deliberate card placement of solitaire.</p>
+      <p><strong>Failure Clarity:</strong> In solitaire, you often realize gradually that a game is unwinnable — you run out of moves slowly. In tile games, failure is sudden and dramatic (slots fill up instantly). This creates higher tension per move in tile games.</p>
+      <p><strong>Visual Satisfaction:</strong> Tile games typically offer more vibrant visuals, animations, and audio feedback when matches occur. Solitaire is more austere — the satisfaction comes from the intellectual challenge rather than sensory rewards.</p>
+
+      <h3>When to Play Which</h3>
+      <p>Choose based on what you need right now:</p>
+      <ul>
+        <li><strong>Play Tile Stack when:</strong> You want quick, engaging stimulation. You have 5-15 minutes. You want colorful visuals and satisfying match effects. You enjoy faster-paced decision making.</li>
+        <li><strong>Play Classic Solitaire when:</strong> You want a quieter, more meditative experience. You have unlimited time and want to think deeply. You prefer minimalist aesthetics. You enjoy the intellectual purity of a classic puzzle.</li>
+        <li><strong>Play both:</strong> Many puzzle enthusiasts rotate between genres. The skills transfer — spatial reasoning, forward planning, pattern recognition — so getting better at one makes you better at the other.</li>
+      </ul>
+
+      <p>The best puzzle game is the one that matches your current mindset. Fortunately, with browser-based games, switching between genres takes nothing more than opening a new tab.</p>
+    </article>
+
+    <!-- Article 8: Update Log -->
+    <article class="post">
+      <div class="date">July 17, 2026</div>
+      <h2>Tile Stack Development Update: Recent Improvements & What's Ahead</h2>
+      <div class="tags"><span class="tag">Update</span><span class="tag">Patch Notes</span><span class="tag">Roadmap</span></div>
+
+      <p>A quick roundup of recent changes to Tile Stack and a preview of what is coming next.</p>
+
+      <h3>Recent Changes</h3>
+      <ul>
+        <li><strong>BGM State Fix:</strong> Fixed background music auto-restore behavior after completing a level. Previously, the music toggle state could unexpectedly reset between screens.</li>
+        <li><strong>Landing Page Redesign:</strong> Completely rebuilt the homepage with clearer navigation, detailed game information, integrated FAQ section, and better mobile responsiveness.</li>
+        <li><strong>Content Expansion:</strong> Added full strategy guide, comprehensive FAQ page, privacy policy, about page, and this blog — transforming the site from a simple game link into a complete resource for players.</li>
+        <li><strong>SEO & Structured Data:</strong> Added Schema.org markup (VideoGame, FAQPage, Article types) to help search engines better understand and display the site in results.</li>
+        <li><strong>AdSense Integration:</strong> Configured ads.txt and AdSense script integration to support sustainable development through non-intrusive advertising.</li>
+      </ul>
+
+      <h3>Coming Soon</h3>
+      <p>The development roadmap includes:</p>
+      <ul>
+        <li>New visual tile themes beyond the current emoji set</li>
+        <li>Sound effect improvements and additional audio options</li>
+        <li>Additional power-up types for trickier situations</li>
+        <li>Social features for challenging friends to beat your score</li>
+        <li>Progressive campaign mode with hand-crafted levels</li>
+        <li>Performance optimizations for lower-end devices</li>
+      </ul>
+
+      <p>Thank you for playing Tile Stack. Your feedback shapes every update.</p>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>
+      <a href="/">Home</a>
+      <a href="/guide.html">Guide</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/blog.html">Updates</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </p>
+    <p>&copy; 2026 Tile Stack. Free online puzzle game.</p>
+  </footer>
+</body>
+</html>

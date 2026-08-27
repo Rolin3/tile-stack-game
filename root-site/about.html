@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Tile Stack - Meet the Creator, Mission & Story</title>
+  <meta name="description" content="Learn about Tile Stack: the free online match-3 puzzle game built with vanilla HTML/CSS/JS. Meet the creator, read the project story, explore our tech stack, and discover what drives our development.">
+  <meta name="keywords" content="About Tile Stack, Tile Stack creator, free puzzle game developer, indie game, HTML5 game, browser game about, Rolin3, match-3 game story">
+  <meta name="author" content="Rolin3">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="About Tile Stack - Our Story & Mission">
+  <meta property="og:description" content="Meet the creator, understand the mission, and learn how Tile Stack was built as a passion project.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rolin3.github.io/about.html">
+  <link rel="canonical" href="https://rolin3.github.io/about.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F004;</text></svg>">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Tile Stack",
+    "description": "Learn about Tile Stack, its creator, mission, and development story.",
+    "url": "https://rolin3.github.io/about.html",
+    "mainEntity": {
+      "@type": "VideoGame",
+      "name": "Tile Stack",
+      "author": { "@type": "Person", "name": "Rolin3" },
+      "genre": ["Puzzle", "Match-3", "Casual"],
+      "gamePlatform": "Web Browser"
+    }
+  }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1a1a2e;
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.8;
+    }
+    a { color: #ff6b81; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav.site-nav {
+      background: #111122;
+      border-bottom: 1px solid #2a2a4a;
+      padding: 14px 20px;
+      text-align: center;
+    }
+    nav.site-nav a { color: #b0b0d0; margin: 0 14px; font-size: 15px; }
+    nav.site-nav a:hover { color: #ff6b81; }
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      padding: 56px 20px 40px;
+      text-align: center;
+      border-bottom: 1px solid #2a2a4a;
+    }
+    header h1 {
+      font-size: 38px;
+      background: linear-gradient(90deg, #ff6b81, #ffca28);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+    header p { color: #b0b0d0; max-width: 560px; margin: 0 auto; font-size: 18px; }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 20px;
+    }
+    section { margin-bottom: 44px; }
+    h2 { font-size: 26px; color: #ffca28; margin-bottom: 16px; }
+    h3 { font-size: 20px; color: #ff6b81; margin: 24px 0 10px; }
+    p { margin-bottom: 16px; color: #c8c8e0; }
+    ul, ol { margin: 12px 0 20px 24px; color: #c8c8e0; }
+    li { margin-bottom: 10px; }
+    strong { color: #fff; }
+    .mission-box {
+      background: linear-gradient(135deg, #16213e 0%, #1a1a35 100%);
+      border: 1px solid #2a2a4a;
+      border-left: 4px solid #ffca28;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin: 24px 0;
+    }
+    .mission-box h3 { margin-top: 0; color: #ffca28; }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .tech-card {
+      background: #16213e;
+      border: 1px solid #2a2a4a;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .tech-card h4 { color: #ff6b81; margin-bottom: 8px; font-size: 17px; }
+    .tech-card p { color: #a0a0c8; font-size: 14px; margin: 0; }
+    .contact-box {
+      background: #16213e;
+      border: 1px solid #2a2a4a;
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 20px;
+    }
+    .timeline { margin-top: 20px; }
+    .timeline-item {
+      border-left: 2px solid #ff6b81;
+      padding-left: 24px;
+      padding-bottom: 24px;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -7px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      background: #ff6b81;
+      border-radius: 50%;
+    }
+    .timeline-item h4 { color: #ffca28; margin-bottom: 6px; }
+    .timeline-item p { color: #b0b0d0; font-size: 15px; margin-bottom: 0; }
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      color: #8080a8;
+      font-size: 14px;
+      background: #111122;
+    }
+    footer a { margin: 0 10px; }
+    @media (max-width: 480px) {
+      header h1 { font-size: 30px; }
+      nav.site-nav a { margin: 0 8px; font-size: 14px; }
+      .tech-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/">Home</a>
+    <a href="/guide.html">Guide</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/blog.html">Updates</a>
+    <a href="/about.html">About</a>
+    <a href="/privacy.html">Privacy</a>
+  </nav>
+
+  <header>
+    <h1>About Tile Stack</h1>
+    <p>A small, focused puzzle game built by one person who believes games should respect your time and intelligence.</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Mission -->
+    <section>
+      <div class="mission-box">
+        <h2>Our Mission</h2>
+        <p>Tile Stack exists for one reason: to prove that a free browser game can be <strong>genuinely fun</strong> without manipulating you into watching ads, creating accounts, or waiting for energy refills.</p>
+        <p>The mobile gaming industry has trained players to accept questionable design patterns as normal. Forced ad breaks. Artificial energy systems that limit playtime. Dark pattern UI that makes canceling subscriptions difficult. Notification spam. Social pressure mechanics. Tile Stack rejects all of this.</p>
+      </div>
+
+      <h3>Our Design Principles</h3>
+      <ol>
+        <li><strong>Instant Play:</strong> Open the site, tap PLAY, start matching. No downloads, no account creation, no tutorial walls.</li>
+        <li><strong>Skill Over Luck:</strong> Every level is mathematically verified solvable. You lose because of your decisions, not because the game dealt you an unwinnable hand.</li>
+        <li><strong>Respect Your Time:</strong> No forced ad interruptions during gameplay. No energy systems. No "wait 30 minutes or pay" mechanics. Play as much as you want, whenever you want.</li>
+        <li><strong>Transparency:</strong> Clear privacy policy. No hidden data collection. No tracking beyond what is necessary for ads and basic analytics.</li>
+        <li><strong>Polish:</strong> Smooth animations, responsive design, thoughtful color choices, and satisfying feedback on every interaction. Free does not mean cheap.</li>
+      </ol>
+    </section>
+
+    <!-- The Story -->
+    <section>
+      <h2>The Story Behind Tile Stack</h2>
+      <p>Tile Stack started as a weekend experiment in June 2026. The creator, an independent developer and product manager, was playing a popular tile-matching mobile game during a commute and kept running into the same frustrations: a 30-second unskippable ad after every level, an energy system that stopped play after 15 minutes, and constant prompts to subscribe or connect social accounts.</p>
+      <p>The thought was simple: <em>"I could build a cleaner version of this. No nonsense. Just the game."</em></p>
+      <p>What began as a weekend project quickly grew into something more. The core gameplay came together in the first two days — tile stacking logic, slot management, match detection, win/loss conditions. But then came the details that separate a prototype from a polished experience: smooth animations, touch handling that feels native on mobile, undo and shuffle tools that feel fair rather than pay-to-win, a daily challenge system that gives players a reason to return, and a leaderboard that creates friendly competition without toxic social pressure.</p>
+
+      <h3>Project Timeline</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>June 2026 — First Commit</h4>
+          <p>Initial build: core game loop, basic UI, single-level mode. Built in pure HTML/CSS/JS over one weekend.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Mid-June 2026 — Core Features</h4>
+          <p>Added Undo, Shuffle, Save/Load progress, multiple difficulty levels, and the first version of daily challenges using Cloudflare Workers + KV backend.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Late June 2026 — Public Launch</h4>
+          <p>Deployed to GitHub Pages (rolin3.github.io) and Cloudflare Pages. Game went live with global leaderboard support.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>July 2026 — Content & Polish</h4>
+          <p>Built out the full website: landing page, strategy guide, FAQ, privacy policy, about page, blog. Added structured data for SEO. Integrated Google AdSense for sustainable non-intrusive monetization.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>August 2026 — Content Deepening</h4>
+          <p>Major content expansion to provide genuine value to visitors: in-depth blog articles, comprehensive strategy guides, and educational content about the tile-matching genre.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About the Creator -->
+    <section>
+      <h2>About the Creator</h2>
+      <p>Tile Stack is developed by <strong>Rolin3</strong>, an independent creator based in China with a background in product management and full-stack development. By day, the focus is on mobile applications — including AI companion products and printing ecosystem software. By night (and on weekends), passion projects like Tile Stack come to life.</p>
+      <p>The philosophy driving Tile Stack is the same one that guides all projects: <strong>build things that solve real problems (or provide real enjoyment) with minimum friction and maximum respect for the user</strong>. This means no dark patterns, no manipulative monetization, no wasting the user's time.</p>
+      <p>Tile Stack is not a company. It is not a startup seeking funding. It is a side project built for the love of game development and the belief that the web deserves better than what app stores have become.</p>
+    </section>
+
+    <!-- Tech Stack -->
+    <section>
+      <h2>How It's Built</h2>
+      <p>Tile Stack is intentionally built with minimal dependencies. Every line of code is hand-written, every animation is custom-crafted, and every design decision is deliberate. Here is what powers the game:</p>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h4>Frontend</h4>
+          <p>Pure HTML5 + CSS3 + Vanilla JavaScript. No frameworks, no bundlers, no build steps. Loads instantly, works everywhere.</p>
+        </div>
+        <div class="tech-card">
+          <h4>Backend API</h4>
+          <p>Cloudflare Workers provides the server logic for daily challenges, leaderboards, and ad verification. Edge-deployed for global low latency.</p>
+        </div>
+        <div class="tech-card">
+          <h4>Data Storage</h4>
+          <p>Cloudflare KV (Key-Value) store holds leaderboard scores, daily challenge seeds, and verification tokens. Simple, fast, cost-effective.</p>
+        </div>
+        <div class="tech-card">
+          <h4>Hosting</h4>
+          <p>GitHub Pages serves the main site (rolin3.github.io). Cloudflare Pages handles the standalone game deployment. Both free tiers.</p>
+        </div>
+        <div class="tech-card">
+          <h4>Analytics & Ads</h4>
+          <p>Google AdSense for non-intrusive advertising that supports ongoing development. Privacy-first approach with clear disclosure.</p>
+        </div>
+        <div class="tech-card">
+          <h4>Version Control</h4>
+          <p>Git with two repositories: one for the game engine, one for the website. Open source code available on GitHub.</p>
+        </div>
+      </div>
+
+      <h3>Why This Stack?</h3>
+      <p>Every technology choice traces back to the core principles:</p>
+      <ul>
+        <li><strong>No framework</strong> = instant loading, zero overhead, maximum compatibility across all browsers and devices.</li>
+        <li><strong>Cloudflare Workers</strong> = serverless scalability without managing servers, pay-per-use pricing suitable for an indie project.</li>
+        <li><strong>GitHub Pages</strong> = free, reliable hosting with automatic SSL, perfect for static content sites.</li>
+        <li><strong>KV storage</strong> = the right tool for simple key-value data. No need for a full database for leaderboards and daily seeds.</li>
+      </ul>
+    </section>
+
+    <!-- Roadmap -->
+    <section>
+      <h2>What's Next</h2>
+      <p>Tile Stack is actively developed. Here is what is on the roadmap:</p>
+      <ul>
+        <li><strong>New Tile Themes:</strong> Beyond emoji tiles — classic Mahjong-style, geometric patterns, seasonal themes, and possibly community-submitted designs.</li>
+        <li><strong>Audio Upgrade:</strong> More polished sound effects for matches, shuffles, wins, and losses. Multiple BGM options or ambient sound modes.</li>
+        <li><strong>New Power-ups:</strong> Additional tools for tricky situations — perhaps a "hint" that highlights a safe move, or a "freeze" that temporarily prevents slot overflow.</li>
+        <li><strong>Social Challenges:</strong> Challenge friends to beat your score on a specific level. Generate shareable links that open directly to that level.</li>
+        <li><strong>Campaign Mode:</strong> A curated set of hand-crafted levels with increasing difficulty, telling a visual story as you progress through worlds or themes.</li>
+        <li><strong>Accessibility Improvements:</strong> Better keyboard navigation, screen reader support, high-contrast mode, and reduced-motion options.</li>
+        <li><strong>Performance Mode:</strong> Optimizations for very low-end devices, ensuring playable frame rates even on older smartphones.</li>
+      </ul>
+      <p>The priority order is driven by player feedback. If there is something you want to see, reach out through the contact information below.</p>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2>Get In Touch</h2>
+      <div class="contact-box">
+        <p>Your feedback — bug reports, feature suggestions, or just thoughts about the game — genuinely shapes what gets built next. Tile Stack would not be what it is today without input from players.</p>
+        <h3>Ways to Reach Us</h3>
+        <ul>
+          <li><strong>GitHub:</strong> <a href="https://github.com/Rolin3/rolin3.github.io" target="_blank" rel="noopener noreferrer">github.com/Rolin3/rolin3.github.io</a> — Report issues, request features, or contribute code.</li>
+          <li><strong>Game Repository:</strong> <a href="https://github.com/Rolin3/tile-stack-game" target="_blank" rel="noopener noreferrer">github.com/Rolin3/tile-stack-game</a> — View the game source code, file bugs, or submit improvements.</li>
+        </ul>
+        <p style="margin-top: 16px; margin-bottom: 0;">Thank you for playing Tile Stack. Every session, every level cleared, every leaderboard entry makes this project worth building.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      <a href="/">Home</a>
+      <a href="/guide.html">Guide</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/blog.html">Updates</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </p>
+    <p>&copy; 2026 Tile Stack. Free online puzzle game. Built with care by Rolin3.</p>
+  </footer>
+</body>
+</html>
